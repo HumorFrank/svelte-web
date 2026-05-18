@@ -25,6 +25,37 @@
 - [svelte-spa-router@4](https://github.com/ItalyPaleAle/svelte-spa-router)  
 - [Vitest](https://vitest.dev/)
 
+## 典型目录结构
+```
+svelte-web/
+├── src/
+│   ├── App.svelte           # 应用入口，配置路由
+│   ├── main.ts              # 入口脚本，加载 uno.css
+│   ├── global.d.ts          # 类型声明
+│   ├── components/          # 通用组件
+│   ├── routes/              # 路由页面
+│   ├── views/               # 业务视图（推荐扩展时新增）
+│   ├── stores/              # Svelte store
+│   ├── styles/              # 全局样式
+│   ├── lib/                 # 工具函数/业务逻辑
+│   ├── composables/         # 组合式函数（如 useXxx.ts，大型项目推荐）
+│   ├── assets/              # 静态资源（图片、svg、音频等）
+│   ├── mock/                # mock 数据与接口（如需本地联调）
+│   ├── types/               # 全局类型定义（如 interfaces、enums 等）
+│   ├── hooks/               # 自定义 hooks（如有特殊逻辑可单独拆分）
+│   ├── utils/               # 通用工具函数（如 string、date、array 等）
+│   └── ...                  # 其他业务/扩展目录
+├── public/                  # 公共静态资源（favicon、robots.txt 等）
+├── tests/                   # 单元/集成测试
+├── uno.config.ts            # UnoCSS 配置
+├── vite.config.ts           # Vite 配置
+├── vitest.config.ts         # Vitest 配置
+├── tsconfig.json            # TypeScript 配置
+├── package.json             # 项目依赖与脚本
+├── index.html               # HTML 模板
+└── deploy.md                # 部署说明
+```
+
 ## 目录结构
 
 ```
