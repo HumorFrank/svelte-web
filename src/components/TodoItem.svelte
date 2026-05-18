@@ -19,7 +19,7 @@
   {#if editing}
     <input class="edit" bind:value={editText} on:blur={handleEdit} on:keydown={(e) => e.key === 'Enter' && handleEdit()} />
   {:else}
-    <span class:completed={todo.completed} on:dblclick={() => { editing = true; editText = todo.text; }}>{todo.text}</span>
+    <span class:completed={todo.completed} role="button" tabindex="0" aria-label="编辑待办" on:dblclick={() => { editing = true; editText = todo.text; }}>{todo.text}</span>
   {/if}
   <button class="remove" on:click={() => dispatch('remove')}>删除</button>
 </li>
