@@ -1,0 +1,7 @@
+/* src/styles/global.css */
+body {
+  font-family: system-ui, sans-serif;
+  background: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}

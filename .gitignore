@@ -1,0 +1,40 @@
+# Svelte Web 项目通用 .gitignore
+
+# Node
+node_modules/
+
+# Vite/构建产物
+dist/
+.vite/
+
+# 日志
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# 本地环境/编辑器
+.env*
+*.local
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# 测试/覆盖率
+coverage/
+
+# Svelte/Vite 缓存
+.svelte-kit/
+.svelte/
+
+# 其他
+*.log
+
+# Mac 系统文件
+*.DS_Store
+
+# 依赖锁定（如不希望锁定可取消注释）
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
