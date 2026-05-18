@@ -1,4 +1,4 @@
-# 了解 Skill
+# 学习 Skill
 
 ## 一个完整的 Skill 只包含三部分
 - 1.基础信息（名字、描述、版本、作者）
@@ -12,6 +12,12 @@
 - `任务`：具体要完成什么内容。
 - `指令`：规定 AI 应该如何执行。
 - `角色`：赋予 AI 扮演的身份（例如：专业翻译、资深程序员）。
+
+## SKILL 技能分类
+- **基本用法**：[SKILL.md 中的说明]
+- **高级功能**：参阅 [advanced.md](advanced.md)
+- **API 参考**：参阅 [reference.md](reference.md)
+- **示例**：参阅 [examples.md](examples.md)
 
 ## 官方文档与规范
 - [Agent Skills](https://agentskills.io/home): 官方`Skills`定义规范，包含`SKILL.md`格式标准和最佳实践
