@@ -1,4 +1,7 @@
+
 # Svelte Web Todo Manager
+
+> 本项目由 AI 辅助开发，遵循自动化最佳实践，所有代码、结构、文档均参考 Skill 规范自动生成与优化。
 
 一个基于 Svelte 4 + Vite + TypeScript + UnoCSS 的现代化待办事项管理器，支持本地存储、SPA 路由、单元测试与一键部署。
 
