@@ -139,6 +139,9 @@ my-skill/
 ## MCP
 > 用于将 AI 工具连接到外部数据源（即使用AI请求外部接口，读取相关数据、设计图、文档等等）
 
+## Skill 技能搜索神器
+- [find-skills](https://www.skills.sh/vercel-labs/skills/find-skills): 这项技能可以帮助您发现和安装来自开放代理技能生态系统的技能。
+
 ## 官方文档与规范
 - [Agent Skills](https://agentskills.io/home): 官方`Skills`定义规范，包含`SKILL.md`格式标准和最佳实践
 - [skill公共仓库](https://www.skills.sh/)
