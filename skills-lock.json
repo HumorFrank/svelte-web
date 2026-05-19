@@ -7,6 +7,12 @@
       "skillPath": "skills/frontend-design/SKILL.md",
       "computedHash": "063a0e6448123cd359ad0044cc46b0e490cc7964d45ef4bb9fd842bd2ffbca67"
     },
+    "svelte": {
+      "source": "vercel-labs/json-render",
+      "sourceType": "github",
+      "skillPath": "skills/svelte/SKILL.md",
+      "computedHash": "b9781032762ee9f12d1816804a10e09e5ce6d36754a5e916c5e77a9cdd6d4d28"
+    },
     "svelte-code-writer": {
       "source": "sveltejs/ai-tools",
       "sourceType": "github",

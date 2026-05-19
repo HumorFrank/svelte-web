@@ -47,7 +47,6 @@ my-skill/
 - [Skills 的位置](https://code.claude.com/docs/zh-CN/skills#skills-的位置)
 - [探索 .claude 目录](https://code.claude.com/docs/zh-CN/claude-directory#ce-dot-claude)
 
-
 ## SKILL 项目结构案例
 ```
 .agents/skills/
