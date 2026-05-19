@@ -1,7 +1,87 @@
-/* src/styles/global.css */
-body {
-  font-family: system-ui, sans-serif;
-  background: #f8f9fa;
+[data-theme='dark'] {
+  --bg-primary: #0f0f12;
+  --bg-card: rgba(255, 255, 255, 0.03);
+  --bg-card-hover: rgba(255, 255, 255, 0.06);
+  --bg-input: rgba(255, 255, 255, 0.04);
+  --border: rgba(255, 255, 255, 0.06);
+  --border-hover: rgba(255, 255, 255, 0.12);
+  --border-focus: rgba(212, 175, 55, 0.4);
+  --text-primary: #ede7d9;
+  --text-secondary: #8b8478;
+  --text-muted: #5c5750;
+  --accent: #d4af37;
+  --accent-hover: #e0c04d;
+  --accent-text: #0f0f12;
+  --accent-glow: rgba(212, 175, 55, 0.15);
+  --danger: #c0392b;
+  --danger-bg: rgba(192, 57, 43, 0.1);
+  --shadow: none;
+  --bg-glow-1: rgba(212, 175, 55, 0.03);
+  --bg-glow-2: rgba(212, 175, 55, 0.02);
+  --radius: 12px;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+}
+
+[data-theme='light'] {
+  --bg-primary: #faf8f5;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f5f3fe;
+  --bg-input: #ffffff;
+  --border: rgba(0, 0, 0, 0.06);
+  --border-hover: rgba(108, 99, 255, 0.2);
+  --border-focus: rgba(108, 99, 255, 0.4);
+  --text-primary: #1a1a2e;
+  --text-secondary: #6b6b7b;
+  --text-muted: #b0b0be;
+  --accent: #6c63ff;
+  --accent-hover: #5a52e0;
+  --accent-text: #ffffff;
+  --accent-glow: rgba(108, 99, 255, 0.15);
+  --danger: #e05050;
+  --danger-bg: rgba(224, 80, 80, 0.08);
+  --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  --bg-glow-1: rgba(108, 99, 255, 0.04);
+  --bg-glow-2: rgba(129, 199, 132, 0.03);
+  --radius: 14px;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html {
+  transition: background 0.4s ease;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 50%, var(--bg-glow-1) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, var(--bg-glow-2) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+#app {
+  position: relative;
+  z-index: 1;
 }

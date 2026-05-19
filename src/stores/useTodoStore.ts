@@ -46,4 +46,4 @@ function createTodoStore() {
   };
 }
 
-export const useTodoStore = createTodoStore;
+export const useTodoStore = createTodoStore();
