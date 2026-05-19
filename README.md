@@ -58,24 +58,33 @@ svelte-web/
 
 ## 目录结构
 
+
 ```
 svelte-web/
 ├── src/
 │   ├── App.svelte           # 应用入口，配置路由
 │   ├── main.ts              # 入口脚本，加载 uno.css
 │   ├── global.d.ts          # 类型声明
-│   ├── components/
-│   │   ├── TodoList.svelte  # 待办列表组件
-│   │   └── TodoItem.svelte  # 单条待办组件
-│   ├── lib/
-│   │   └── types.ts         # Todo 类型定义
-│   ├── routes/
+│   ├── components/          # 通用组件
+│   │   ├── TodoItem.svelte  # 单条待办组件
+│   │   └── TodoList.svelte  # 待办列表组件
+│   ├── routes/              # 路由页面
 │   │   ├── Home.svelte      # 首页
 │   │   └── NotFound.svelte  # 404 页面
-│   ├── stores/
-│   │   └── useTodoStore.ts  # Svelte store，含本地持久化
-│   └── styles/
-│       └── global.css       # 全局样式
+│   ├── stores/              # Svelte store
+│   │   ├── useTodoStore.ts  # 待办 store，含本地持久化
+│   │   └── useThemeStore.ts # 主题 store（如有主题切换）
+│   ├── lib/                 # 业务类型/工具
+│   │   └── types.ts         # Todo 类型定义
+│   ├── styles/              # 全局样式
+│   │   └── global.css       # 全局样式
+│   ├── assets/              # 静态资源
+│   ├── composables/         # 组合式函数
+│   ├── hooks/               # 自定义 hooks
+│   ├── mock/                # mock 数据
+│   ├── types/               # 全局类型定义
+│   ├── utils/               # 通用工具函数
+│   └── views/               # 业务视图（可选扩展）
 ├── tests/
 │   └── todoStore.test.ts    # Store 单元测试
 ├── uno.config.ts            # UnoCSS 配置
