@@ -46,6 +46,7 @@ my-skill/
 3️⃣ 官方参考资料
 - [Skills 的位置](https://code.claude.com/docs/zh-CN/skills#skills-的位置)
 - [探索 .claude 目录](https://code.claude.com/docs/zh-CN/claude-directory#ce-dot-claude)
+- [Claude Code Skills 完全指南](https://github.com/datawhalechina/easy-vibe/blob/main/docs/zh-cn/stage-3/core-skills/skills/index.md)
 
 ## SKILL 项目结构案例
 ```
@@ -136,14 +137,68 @@ my-skill/
   - 兼容 Claude 体系：`CLAUDE.md`、.`claude/rules/`
   - 支持自定义 agent/skill 目录（如 `.cursor/skills/`，但主流用法是兼容上面两套）
 
-## MCP
+## Skills vs 提示词
+
+| Prompt（提示词）           | Skills                 |
+| -------------------------- | ---------------------- |
+| 临时性的，每次都要重复说   | 持久化的，写一次反复用 |
+| 存在对话历史中，占用 Token | 按需加载，节省 Token   |
+| 无法在会话间共享           | 可以在团队中共享       |
+| 难以版本控制               | 可以用 Git 管理        |
+
+## Skills vs MCP
+
+### Skills
+Skills 是存储在文件系统中的"技能包"，包含：
+- `SKILL.md`：技能的定义文件（必需）
+- `scripts/`：辅助脚本（可选）
+- `templates/`：输出模板（可选）
+- `references/`：参考文档（可选）
+
+### MCP
 > 用于将 AI 工具连接到外部数据源（即使用AI请求外部接口，读取相关数据、设计图、文档等等）
+
+### 形象比喻
+如果把 Claude 比作一个"工作人员"：
+- MCP 是给这个工作人员配备的"工具"（扳手、电脑、访问权限）
+- Skills 是给这个工作人员的"操作手册"（怎么做代码审查、怎么提交代码）
+
+### 它们的关系
+Skills 和 MCP 不是竞争关系，而是互补关系：两者配合，Skills 告诉 Claude "怎么审查"，MCP 给 Claude "访问代码的能力"。
+```
+用户任务 → Claude 识别需求
+            ↓
+        加载相关 Skills（知道怎么做）
+            ↓
+        通过 MCP 调用工具（有工具可用）
+            ↓
+        完成任务
+```
+### 核心区别
+
+| 维度     | Skills                   | MCP              |
+| -------- | ------------------------ | ---------------- |
+| 本质     | 知识和流程               | 工具和接口       |
+| 提供什么 | 告诉 AI "怎么做"         | 给 AI "能用什么" |
+| 存储位置 | `skills/` 目录           | MCP 服务器       |
+| 配置方式 | Markdown 文件            | JSON 配置文件    |
+| 触发方式 | `/skill-name` 或自动识别 | 通过配置自动加载 |
+
+### 选择建议
+
+| 你的需求         | 推荐方案  |
+| ---------------- | --------- |
+| 需要定义工作流程 | 用 Skills |
+| 需要访问外部数据 | 用 MCP    |
+| 需要两者都有     | 配合使用  |
+
 
 ## Skill 技能搜索神器
 - [find-skills](https://www.skills.sh/vercel-labs/skills/find-skills): 这项技能可以帮助您发现和安装来自开放代理技能生态系统的技能。
 
 ## skill公共仓库
 > [skill公共仓库](https://www.skills.sh/)
+> [精选 Skills 资源列表](https://github.com/JackyST0/awesome-agent-skills)
 
 ## 官方文档与规范
 - [Agent Skills](https://agentskills.io/home): 官方`Skills`定义规范，包含`SKILL.md`格式标准和最佳实践
