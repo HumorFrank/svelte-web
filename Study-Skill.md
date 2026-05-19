@@ -1,5 +1,10 @@
 # Study Skill
 
+## Agent Skills
+
+❇️ 官方参考文档
+- [Agent Skills](https://agentskills.io/home)
+
 ## SKILL 技能分类
 - **基本用法**：[SKILL.md 中的说明]
 - **高级功能**：参阅 [advanced.md](advanced.md)
@@ -12,6 +17,35 @@
 | -------------- | ---------------------------------------- | ------------------------------------------ |
 | GitHub Copilot | `.github/skills/` <br> `.agents/skills/` | `.github/skills/` <br> `~/.agents/skills/` |
 | Claude Code    | `.claude/skills/`                        | `~/.claude/skills/`                        |
+
+### Claude Code Skills 的位置
+
+1️⃣ Skills 的位置：你存储 skill 的位置决定了谁可以使用它
+
+| 位置 | 路径                                      ｜  	适用于 |
+| ---- | ----------------------------------------------------- ||
+| 企业 | 请参阅[托管设置](https://code.claude.com/docs/zh-CN/settings#settings-files)	｜        你的组织中的所有用户 |
+| 个人 | `~/.claude/skills/<skill-name>/SKILL.md`	 ｜     你的所有项目            |
+| 项目 | `.claude/skills/<skill-name>/SKILL.md`	    ｜        仅此项目            |
+| 插件 | `<plugin>/skills/<skill-name>/SKILL.md`	    ｜     启用插件的位置        |
+
+2️⃣ 每个 skill 都是一个以 `SKILL.md` 作为`入口`点的`目录`
+
+```
+my-skill/
+├── SKILL.md           # 主要说明（必需）
+├── template.md        # Claude 要填写的模板
+├── examples/
+│   └── sample.md      # 显示预期格式的示例输出
+└── scripts/
+    └── validate.sh    # Claude 可以执行的脚本
+```
+> `SKILL.md` 包含主要说明，是必需的。其他文件是可选的，让你构建更强大的 `skills：Claude` 要填写的模板、显示预期格式的示例输出、Claude 可以执行的脚本或详细的参考文档。
+> 从你的 `SKILL.md` 中`引用`这些文件，以便 Claude 知道它们包含什么以及何时加载它们。
+
+3️⃣ 官方参考资料
+- [Skills 的位置](https://code.claude.com/docs/zh-CN/skills#skills-的位置)
+
 
 ## SKILL 项目结构案例
 ```
@@ -103,10 +137,13 @@
   - 支持自定义 agent/skill 目录（如 `.cursor/skills/`，但主流用法是兼容上面两套）
 
 ## MCP
+> 用于将 AI 工具连接到外部数据源（即使用AI请求外部接口，读取相关数据、设计图、文档等等）
 
 ## 官方文档与规范
 - [Agent Skills](https://agentskills.io/home): 官方`Skills`定义规范，包含`SKILL.md`格式标准和最佳实践
+- [skill公共仓库](https://www.skills.sh/)
 - [Claude Code Documentation](https://platform.claude.com/docs/zh-CN/agents-and-tools/agent-skills/overview): Anthropic关于Agent Skills的实现指南和API参考
+- [Claude Code 使用说明、skills 和 hooks 进行自定义](https://code.claude.com/docs/zh-CN/overview#skills-hooks)
 - [理解自定义技能架构](https://platform.claude.com/cookbook/skills-notebooks-03-skills-custom-development#architecture)
 - [技能编写最佳实践](https://platform.claude.com/docs/zh-CN/agents-and-tools/agent-skills/best-practices)
 
