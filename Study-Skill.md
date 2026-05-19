@@ -45,6 +45,7 @@ my-skill/
 
 3️⃣ 官方参考资料
 - [Skills 的位置](https://code.claude.com/docs/zh-CN/skills#skills-的位置)
+- [探索 .claude 目录](https://code.claude.com/docs/zh-CN/claude-directory#ce-dot-claude)
 
 
 ## SKILL 项目结构案例
@@ -142,9 +143,11 @@ my-skill/
 ## Skill 技能搜索神器
 - [find-skills](https://www.skills.sh/vercel-labs/skills/find-skills): 这项技能可以帮助您发现和安装来自开放代理技能生态系统的技能。
 
+## skill公共仓库
+> [skill公共仓库](https://www.skills.sh/)
+
 ## 官方文档与规范
 - [Agent Skills](https://agentskills.io/home): 官方`Skills`定义规范，包含`SKILL.md`格式标准和最佳实践
-- [skill公共仓库](https://www.skills.sh/)
 - [Claude Code Documentation](https://platform.claude.com/docs/zh-CN/agents-and-tools/agent-skills/overview): Anthropic关于Agent Skills的实现指南和API参考
 - [Claude Code 使用说明、skills 和 hooks 进行自定义](https://code.claude.com/docs/zh-CN/overview#skills-hooks)
 - [理解自定义技能架构](https://platform.claude.com/cookbook/skills-notebooks-03-skills-custom-development#architecture)
