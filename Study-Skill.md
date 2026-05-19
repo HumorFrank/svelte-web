@@ -6,6 +6,13 @@
 - **API 参考**：参阅 [reference.md](reference.md)
 - **示例**：参阅 [examples.md](examples.md)
 
+## 技能目录位置对比
+
+| 工具           | 项目级技能目录                           | 个人级技能目录                             |
+| -------------- | ---------------------------------------- | ------------------------------------------ |
+| GitHub Copilot | `.github/skills/` <br> `.agents/skills/` | `.github/skills/` <br> `~/.agents/skills/` |
+| Claude Code    | `.claude/skills/`                        | `~/.claude/skills/`                        |
+
 ## SKILL 项目结构案例
 ```
 .agents/skills/
@@ -95,6 +102,7 @@
   - 兼容 Claude 体系：`CLAUDE.md`、.`claude/rules/`
   - 支持自定义 agent/skill 目录（如 `.cursor/skills/`，但主流用法是兼容上面两套）
 
+## MCP
 
 ## 官方文档与规范
 - [Agent Skills](https://agentskills.io/home): 官方`Skills`定义规范，包含`SKILL.md`格式标准和最佳实践
