@@ -30,5 +30,6 @@ Svelte 4 + Vite 5 + TypeScript + UnoCSS + svelte-spa-router + pnpm
 | `unocss` | UnoCSS 原子 CSS 用法 |
 | `typescript` | TypeScript 配置与类型约定 |
 | `pnpm` | pnpm 包管理与 workspace 规范 |
+| `svelte-web-dev` | svelte-web 项目完整开发规范（目录/组件/状态/样式/测试/部署/流程） |
 
-AI 生成代码时请优先遵循上述规范和技能内容。
+AI 生成代码时请优先遵循上述规范和技能内容，其中 `svelte-web-dev` 为项目主规范，优先级最高。
